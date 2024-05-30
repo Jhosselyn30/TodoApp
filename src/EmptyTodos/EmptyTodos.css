@@ -1,0 +1,59 @@
+/* Estilos base que aplicarán tanto para móviles como para pantallas más grandes */
+.btn-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-shine {
+  padding: 12px 48px;
+  font-weight: 600;
+  font-size: 50px; /* Puedes ajustar esto según sea necesario */
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  color:#ab526b;
+  background: linear-gradient(to right, #efaaa3 0, #ab526b 10%, #efaaa3 20%);
+  background-position: 0;
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none; 
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  60% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) { /* Tablets y móviles en posición horizontal */
+  .btn-shine {
+    padding: 10px 24px;
+    font-size: 30px; /* Tamaño de fuente más pequeño */
+  }
+}
+
+@media (max-width: 480px) { /* Móviles en posición vertical */
+  .btn-shine {
+    padding: 8px 20px;
+    font-size: 20px; /* Tamaño de fuente aún más pequeño */
+  }
+}
+
+/* Asegúrate de agregar tus keyframes y otros estilos aquí */
